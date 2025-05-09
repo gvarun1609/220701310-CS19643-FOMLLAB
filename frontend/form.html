@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Battery Life Predictor - Input</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <section id="inputSection" class="form-section">
+    <h2>Enter Battery Data</h2>
+    <div class="form-container">
+      <form id="predictForm">
+        <div class="form-row"><label for="Voltage">Voltage:</label><input type="number" name="Voltage" id="Voltage" required /></div>
+        <div class="form-row"><label for="Current">Current:</label><input type="number" name="Current" id="Current" required /></div>
+        <div class="form-row"><label for="Temperature">Temperature:</label><input type="number" name="Temperature" id="Temperature" required /></div>
+        <div class="form-row"><label for="Charge_Cycles_Completed">Charge Cycles:</label><input type="number" name="Charge_Cycles_Completed" id="Charge_Cycles_Completed" required /></div>
+        <div class="form-row"><label for="Total_Cycle_Life">Total Cycle Life:</label><input type="number" name="Total_Cycle_Life" id="Total_Cycle_Life" required /></div>
+        <div class="form-row submit-row"><button type="submit">Predict Remaining Life</button></div>
+      </form>
+    </div>
+
+    <p id="result"></p>
+
+    <div class="gauges-wrapper">
+        <div class="gauge-card">
+          <canvas id="voltageGauge" class="gauge"></canvas>
+          <div class="gauge-label">Voltage</div>
+        </div>
+        <div class="gauge-card">
+          <canvas id="currentGauge" class="gauge"></canvas>
+          <div class="gauge-label">Current</div>
+        </div>
+        <div class="gauge-card">
+          <canvas id="tempGauge" class="gauge"></canvas>
+          <div class="gauge-label">Temperature</div>
+        </div>
+        <div class="gauge-card">
+          <canvas id="cyclesGauge" class="gauge"></canvas>
+          <div class="gauge-label">Charge Cycles</div>
+        </div>
+      </div>
+      
+    <canvas id="lifeChart"></canvas>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

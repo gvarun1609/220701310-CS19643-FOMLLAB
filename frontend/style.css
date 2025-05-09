@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: black;
+  }
+  
+  .form-section {
+    padding: 50px 20px;
+    background: lightgreen;
+    text-align: center;
+  }
+  
+  .form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: black;
+  }
+  
+  .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgb(103, 99, 99);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .form-row label {
+    width: 40%;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .form-row input {
+    width: 55%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .submit-row {
+    justify-content: center;
+  }
+  
+  .submit-row button {
+    padding: 10px 20px;
+    background: #0984e3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .submit-row button:hover {
+    background: #065cb4;
+  }
+  
+  #result {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  #lifeChart {
+    max-width: 500px;
+    margin: 30px auto 0;
+    display: block;
+  }
+  
+  .gauges-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    margin-top: 30px;
+    overflow-x: auto;
+    padding: 10px;
+  }
+  
+  .gauge-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    min-width: 200px;
+  }
+  
+  .gauge {
+    width: 150px !important;
+    height: 100px !important;
+  }
+  
+  .gauge-label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  }
+  
+    .gauge-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+    }
+  /* Make sure page takes full screen */
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+  }
+
+  .video-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+
+  .overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 15px #000;
+    margin-bottom: 1rem;
+  }
+
+  .overlay button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #00f2ff;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .overlay button:hover {
+    background-color: white;
+    color: black;
+  }
+
+ 
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+  }
+  body.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+  
+  

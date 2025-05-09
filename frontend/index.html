@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battery Life Predictor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="video-container">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="background.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+
+    <div class="overlay">
+      <h1>Battery Life Predictor</h1>
+      <button id="scrollBtn">Check Now</button>
+    </div>
+  </div>
+
+  <script>
+    // Ensure DOM is loaded
+    document.addEventListener("DOMContentLoaded", function () {
+      // Make sure video starts
+      const video = document.getElementById("bg-video");
+      video.play().catch(err => {
+        console.log("Autoplay blocked:", err);
+      });
+
+      // Handle button click
+      document.getElementById("scrollBtn").addEventListener("click", function () {
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location.href = "form.html"; // Change this if needed
+        }, 1000);
+      });
+    });
+  </script>
+
+</body>
+</html>
